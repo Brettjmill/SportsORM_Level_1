@@ -1,0 +1,177 @@
+<div class="card">
+    <div class="card-header bg-dark text-light">Level 1</div>
+    <div class="card-body">
+        <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
+        <ol>
+            <li>...all womens' leagues</li>
+            <li>...all leagues where sport is any type of hockey</li>
+            <li>...all leagues where sport is something OTHER THAN football</li>
+            <li>...all leagues that call themselves "conferences"</li>
+            <li>...all leagues in the Atlantic region</li>
+            <li>...all teams based in Dallas</li>
+            <li>...all teams named the Raptors</li>
+            <li>...all teams whose location includes "City"</li>
+            <li>...all teams whose names begin with "T"</li>
+            <li>...all teams, ordered alphabetically by location</li>
+            <li>...all teams, ordered by team name in reverse alphabetical order</li>
+            <li>...every player with last name "Cooper"</li>
+            <li>...every player with first name "Joshua"</li>
+            <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
+            <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+        </ol>
+        <br>
+        <p>Results for above queries:</p>
+        <ol>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.WomensLeagues)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.HockeyLeagues)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.NotFootball)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.ConferenceLeagues)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.AtlanticLeagues)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.DallasTeams)
+                    {
+                        <li>
+                            Dallas @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.RaptorTeams)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.CityTeams)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.TNamedTeams)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.AlphabetizedTeams)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.ReverseAlphaTeamNames)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.CooperPlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.JoshuaPlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.CooperNotJoshPlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.AlexanderWyattPlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
