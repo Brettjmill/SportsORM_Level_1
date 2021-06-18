@@ -12,5 +12,88 @@
             <li>...all leagues with a (current) player named "Sophia"</li>
             <li>...everyone with the last name "Flores" who DOESN'T (currently) play for the Washington Roughriders</li>
         </ol>
+        <p>Results for above queries:</p>
+        <ol>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.ASCTeams)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.BostonPenguins)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.ICBConferencePlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.ACAFootballPlayersLopez)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.AllFootballPlayers)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var t in ViewBag.TeamsWithSophia)
+                    {
+                        <li>
+                            @t.Location @t.TeamName
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var l in ViewBag.LeaguesWithSophia)
+                    {
+                        <li>
+                            @l.Name
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    @foreach(var p in ViewBag.FloresNotARoughrider)
+                    {
+                        <li>
+                            @p.FirstName @p.LastName
+                        </li>
+                    }
+                </ul>
+            </li>
+        </ol>
     </div>
 </div>
